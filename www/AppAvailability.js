@@ -18,6 +18,16 @@ var appAvailability = {
             "checkAvailability",
             [urlScheme]
         );
+    },
+
+    info: function(packageName, successCallback, errorCallback) {
+        cordova.exec(
+            successCallback,
+            errorCallback,
+            "AppAvailability",
+            "getInfo",
+            [packageName]
+        );
     }
     
 };
